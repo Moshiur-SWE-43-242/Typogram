@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help | Typogram</title>
+  <link rel="stylesheet" href="help-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="help-container">
+    <h1>🤝 Need Help?</h1>
+
+    <div class="tab-selector">
+      <button class="tab active" onclick="switchTab('student')">Student Help</button>
+      <button class="tab" onclick="switchTab('admin')">Admin Help</button>
+    </div>
+
+    <div id="studentHelp" class="help-content active">
+      <h2>📘 Student FAQs</h2>
+      <div class="faq">
+        <button class="accordion">How do I register?</button>
+        <div class="panel"><p>Use the registration page and enter your DIU Reg ID and email.</p></div>
+
+        <button class="accordion">Can I take multiple practice tests?</button>
+        <div class="panel"><p>Yes, unlimited practice tests are available.</p></div>
+
+        <button class="accordion">How do I get my certificate?</button>
+        <div class="panel"><p>If allowed by admin, your certificate will be available after completion.</p></div>
+      </div>
+    </div>
+
+    <div id="adminHelp" class="help-content">
+      <h2>📙 Admin FAQs</h2>
+      <div class="faq">
+        <button class="accordion">How to launch a contest?</button>
+        <div class="panel"><p>Use the Admin Dashboard's "Launch Contest" section.</p></div>
+
+        <button class="accordion">How to manage leaderboard?</button>
+        <div class="panel"><p>Admins can view and sort leaderboards by WPM, Accuracy, and Time.</p></div>
+
+        <button class="accordion">Can I customize certificates?</button>
+        <div class="panel"><p>Yes, with logo, seal, and layout control under the certificate page.</p></div>
+      </div>
+    </div>
+
+    <div class="report-issue">
+      <h2>🐞 Report an Issue</h2>
+      <input type="text" placeholder="Your email" />
+      <textarea placeholder="Describe your issue..."></textarea>
+      <button onclick="alert('✅ Issue submitted!')">Submit Issue</button>
+    </div>
+  </div>
+
+  <div class="chatbot-button" onclick="toggleChatbot()">
+    <img src="assets/ai-icon.png" alt="AI Bot" />
+  </div>
+
+  <div class="chatbot-box" id="chatbotBox">
+    <div class="chat-header">
+      <span>💬 Typogram AI Helper</span>
+      <button onclick="toggleChatbot()">✖</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <p class="bot-msg">Hi! Ask me anything about Typogram 🚀</p>
+    </div>
+    <input type="text" id="userInput" placeholder="Type your question..." onkeypress="handleKey(event)" />
+  </div>
+
+ <footer class="typogram-footer">
+  <div class="footer-content">
+    <p>👤 <strong>Owner:</strong> Md Moshiur Rahaman Riat</p>
+    <div class="footer-icons">
+      <a href="mailto:rahaman242-35-606@diu.edu.bd" title="Email">
+        <img src="assets/email-icon.png" alt="Email" />
+      </a>
+      <a href="https://web.facebook.com/thefadedleo.moshiur606" target="_blank" title="Facebook">
+        <img src="assets/facebook-icon.png" alt="Facebook" />
+      </a>
+      <a href="https://www.linkedin.com/in/md-moshiur-rahaman-riat-ba7624319/" target="_blank" title="LinkedIn">
+        <img src="assets/linkedin-icon.png" alt="LinkedIn" />
+      </a>
+    </div>
+    <p>&copy; 2025 Typogram. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

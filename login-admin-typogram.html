@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login | Typogram</title>
+  <link rel="stylesheet" href="login-admin-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-box">
+    <h2>🛡️ Admin Login</h2>
+    <form id="adminLoginForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="e.g. moshiur_123456789" required>
+      </div>
+
+      <div class="form-group">
+        <label for="otp">6-Digit OTP</label>
+        <input type="text" id="otp" placeholder="Enter OTP" maxlength="6" required>
+      </div>
+
+      <div class="form-group">
+        <label for="systemId">System ID (from Owner)</label>
+        <input type="text" id="systemId" placeholder="Enter System ID" required>
+      </div>
+
+      <button type="submit" class="login-btn">Login</button>
+      <p id="loginMessage" class="message"></p>
+    </form>
+  </div>
+  <script src="login-admin-typogram.js"></script>
+</body>
+</html>

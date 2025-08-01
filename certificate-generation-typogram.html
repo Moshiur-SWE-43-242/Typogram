@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificate | Typogram</title>
+  <link rel="stylesheet" href="certificate-generation-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="certificate-container">
+    <h1>🎓 Certificate Generator</h1>
+
+    <div class="controls" id="adminControls">
+      <h3>Admin Customization</h3>
+      <label>
+        <input type="checkbox" id="toggleCertificate" checked />
+        Allow Certificate Downloads
+      </label>
+
+      <input type="text" id="customMessage" placeholder="Custom Message (optional)" />
+      <input type="file" id="sealUpload" accept="image/*" />
+      <input type="file" id="signatureUpload" accept="image/*" />
+    </div>
+
+    <div id="certificatePreview" class="certificate">
+      <h2>Certificate of Completion</h2>
+      <p>This certifies that</p>
+      <h3 id="studentName">Md Moshiur Rahaman Riat</h3>
+      <p>has successfully completed the</p>
+      <h4 id="examType">Typing Practice</h4>
+      <p>on <span id="issueDate">June 8, 2025</span></p>
+      <p>with <strong id="wpm">62</strong> WPM and <strong id="accuracy">97%</strong> accuracy</p>
+
+      <div class="branding">
+        <img id="sealImg" src="assets/seal.png" alt="Seal" />
+        <img id="signatureImg" src="assets/signature.png" alt="Signature" />
+      </div>
+
+      <p class="brand">Issued by: <span id="brand">Typogram</span></p>
+    </div>
+
+    <button id="downloadBtn">📥 Download Certificate</button>
+    <p id="downloadStatus" class="status-message"></p>
+  </div>
+
+  <script src="certificate-generation-typogram.js"></script>
+</body>
+</html>
+

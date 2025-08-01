@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Verification | Typogram</title>
+  <link rel="stylesheet" href="email-verification-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="verification-box">
+    <h2>📩 Email Verification</h2>
+    <p>Please enter your username and 6-digit code sent to your email.</p>
+    <form id="verificationForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="e.g. moshiur_242-35-606" required>
+      </div>
+      <div class="form-group">
+        <label for="otp">6-Digit OTP</label>
+        <input type="text" id="otp" placeholder="e.g. 123456" maxlength="6" required>
+      </div>
+      <button type="submit" class="verify-btn">Verify Now</button>
+      <p class="message" id="message"></p>
+    </form>
+  </div>
+  <script src="email-verification-typogram.js"></script>
+</body>
+</html>

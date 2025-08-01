@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.verification-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  color: #f0f0f0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  color: #222;
+}
+
+.verify-btn {
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.verify-btn:hover {
+  transform: scale(1.05);
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+

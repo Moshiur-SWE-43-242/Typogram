@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contest Leaderboard | Typogram</title>
+  <link rel="stylesheet" href="contest-leaderboard-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="leaderboard-container">
+    <h1>🏆 Contest Leaderboard</h1>
+    <p class="note">Sortable by WPM, Accuracy, and Time</p>
+
+    <table id="contestTable">
+      <thead>
+        <tr>
+          <th onclick="sortContestTable(0)">Student Name</th>
+          <th onclick="sortContestTable(1)">WPM</th>
+          <th onclick="sortContestTable(2)">Accuracy</th>
+          <th onclick="sortContestTable(3)">Time</th>
+        </tr>
+      </thead>
+      <tbody id="contestBody">
+        <!-- Filled by JS -->
+      </tbody>
+    </table>
+
+    <p id="emptyMsg" class="empty-msg">No contest data found yet.</p>
+  </div>
+
+  <script src="contest-leaderboard-typogram.js"></script>
+</body>
+</html>

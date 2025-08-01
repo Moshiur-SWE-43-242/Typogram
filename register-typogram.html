@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Typogram</title>
+  <link rel="stylesheet" href="register-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="register-box">
+    <h1>📝 Typogram Registration</h1>
+    <form id="registerForm" novalidate>
+      <div class="form-group">
+        <label for="userType">User Type</label>
+        <select id="userType" required>
+          <option value="">Select Role</option>
+          <option value="Student">Student</option>
+          <option value="Admin">Admin</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" placeholder="e.g. Moshiur" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" placeholder="e.g. Riat" required>
+      </div>
+
+      <div class="form-group" id="dynamicIDBlock">
+        <!-- Reg ID or Employee ID inserted dynamically -->
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="example@diu.edu.bd" required>
+      </div>
+
+      <button type="submit" class="submit-btn">Register</button>
+      <p class="message" id="message"></p>
+    </form>
+  </div>
+
+  <script src="register-typogram.js"></script>
+</body>
+</html>

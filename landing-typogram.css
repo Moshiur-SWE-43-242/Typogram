@@ -1,0 +1,76 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom right, BlueViolet, indigo);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.landing-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ffeb3b;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.button-group button {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+}
+
+.register-btn {
+  background: linear-gradient(to right, #ff9800, #ffc107);
+  color: #222;
+}
+
+.button-group button:hover {
+  transform: scale(1.05);
+}

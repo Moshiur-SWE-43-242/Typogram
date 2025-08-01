@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Owner Dashboard | Typogram</title>
+  <link rel="stylesheet" href="owner-dashboard-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="owner-dashboard">
+    <h1>👑 Owner Dashboard</h1>
+
+    <div class="grid">
+      <div class="card" onclick="goto('practice-leaderboard-typogram.html')">
+        📝 Practice Leaderboard
+      </div>
+      <div class="card" onclick="goto('contest-leaderboard-typogram.html')">
+        🏆 Contest Leaderboard
+      </div>
+      <div class="card" onclick="goto('certificate-generation-typogram.html')">
+        📄 Certificate Control
+      </div>
+      <div class="card" onclick="goto('student-dashboard-typogram.html')">
+        🎓 View as Student
+      </div>
+      <div class="card" onclick="goto('admin-dashboard-typogram.html')">
+        🛡️ View as Admin
+      </div>
+      <div class="card" onclick="goto('help-typogram.html')">
+        💬 View Help & Chat Logs
+      </div>
+    </div>
+
+    <div class="stats">
+      <h2>📊 System Summary</h2>
+      <ul>
+        <li>Total Registered Users: <span id="totalUsers">1200</span></li>
+        <li>Total Contests Launched: <span id="totalContests">15</span></li>
+        <li>Total Submissions: <span id="totalSubs">3850</span></li>
+        <li>Certificates Generated: <span id="totalCerts">1020</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="owner-dashboard-typogram.js"></script>
+</body>
+</html>

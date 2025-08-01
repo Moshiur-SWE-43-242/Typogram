@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practice Leaderboard | Typogram</title>
+  <link rel="stylesheet" href="practice-leaderboard-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="leaderboard-container">
+    <h1>📊 Practice Leaderboard</h1>
+    <p class="note">Only your practice results are visible here.</p>
+
+    <table id="leaderboardTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Date 🗓️</th>
+          <th onclick="sortTable(1)">WPM 🔠</th>
+          <th onclick="sortTable(2)">Accuracy 🎯</th>
+          <th onclick="sortTable(3)">Time ⏱️</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <!-- Populated by JS -->
+      </tbody>
+    </table>
+
+    <p id="emptyMessage" class="empty-msg">No practice records found.</p>
+  </div>
+
+  <script src="practice-leaderboard-typogram.js"></script>
+</body>
+</html>

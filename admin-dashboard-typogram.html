@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard | Typogram</title>
+  <link rel="stylesheet" href="admin-dashboard-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="admin-container">
+    <h1>🛡️ Welcome, Admin</h1>
+
+    <section class="admin-section">
+      <h2>📣 Launch New Contest</h2>
+      <form id="contestForm">
+        <input type="text" id="contestTitle" placeholder="Contest Title" required>
+        <textarea id="contestText" placeholder="Typing Text (Counts by words)" required></textarea>
+        <input type="date" id="contestDate" required>
+        <input type="number" id="contestTime" placeholder="Time Limit (minutes)" required>
+        <button type="submit">Launch Contest</button>
+        <p class="msg" id="contestMsg"></p>
+      </form>
+    </section>
+
+    <section class="admin-section">
+      <h2>📊 View All Student Results</h2>
+      <p>Feature under integration (backend needed)</p>
+    </section>
+
+    <section class="admin-section">
+      <h2>🔁 Grant Contest Re-Attempts</h2>
+      <p>Feature under integration (backend needed)</p>
+    </section>
+
+    <section class="admin-section">
+      <h2>🏅 View Leaderboards</h2>
+      <button onclick="viewLeaderboard('practice')">Practice Leaderboard</button>
+      <button onclick="viewLeaderboard('contest')">Contest Leaderboard</button>
+    </section>
+  </div>
+  <script src="admin-dashboard-typogram.js"></script>
+</body>
+</html>

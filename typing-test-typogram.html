@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Test | Typogram</title>
+  <link rel="stylesheet" href="typing-test-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="test-container">
+    <div class="test-header">
+      <h1>⌨️ Typing Test</h1>
+      <img src="assets/logo.png" alt="Typing Illustration" class="illustration">
+    </div>
+
+    <div class="test-info">
+      <span id="wpm">WPM: 0</span>
+      <span id="accuracy">Accuracy: 100%</span>
+      <span id="timer">Time: 00:00</span>
+    </div>
+
+    <div class="test-box">
+      <div id="testText" class="test-text"></div>
+      <textarea id="inputBox" placeholder="Start typing here..." autofocus></textarea>
+    </div>
+
+    <button id="submitBtn">Submit Test</button>
+    <p id="resultMessage" class="result-message"></p>
+  </div>
+
+  <audio id="typeSound" src="assets/type.wav" preload="auto"></audio>
+  <script src="typing-test-typogram.js"></script>
+</body>
+</html>

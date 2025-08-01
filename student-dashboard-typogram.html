@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard | Typogram</title>
+  <link rel="stylesheet" href="student-dashboard-typogram.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>👋 Welcome, <span id="studentName">Student</span>!</h1>
+
+    <section class="section practice-section">
+      <h2>📝 Start a Practice Test</h2>
+      <div class="button-group">
+        <button onclick="startPractice('Beginner')">Beginner</button>
+        <button onclick="startPractice('Intermediate')">Intermediate</button>
+        <button onclick="startPractice('Advanced')">Advanced</button>
+      </div>
+    </section>
+
+    <section class="section contest-section">
+      <h2>🏆 Upcoming Contest</h2>
+      <p>📅 Scheduled on: <strong>June 10, 2025</strong></p>
+      <button id="contestBtn" onclick="attemptContest()">Attempt Contest</button>
+      <p id="contestMsg" class="contest-msg"></p>
+    </section>
+
+    <section class="section history-section">
+      <h2>📊 Practice History</h2>
+      <p>Coming soon: Your past test results and scores.</p>
+    </section>
+  </div>
+
+  <script src="student-dashboard-typogram.js"></script>
+</body>
+</html>
