@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  MODERATOR
+  SUPER_ADMIN
+}
+
+enum UserStatus {
+  ACTIVE
+  BANNED
+  SUSPENDED
+}
+
+model User {
+  id               String           @id @default(uuid())
+  fullName         String           @map("full_name")
+  username         String           @unique
+  email            String           @unique
+  passwordHash     String           @map("password_hash")
+  profilePicture   String?          @map("profile_picture")
+  role             Role             @default(USER)
+  isVerified       Boolean          @default(false) @map("is_verified")
+  status           UserStatus       @default(ACTIVE)
+  xpPoints         Int              @default(0) @map("xp_points")
+  coinBalance      Int              @default(0) @map("coin_balance")
+  currentLevel     Int              @default(1) @map("current_level")
+  
+  createdAt        DateTime         @default(now()) @map("created_at")
+  updatedAt        DateTime         @updatedAt @map("updated_at")
+
+  // Relations
+  refreshSessions  RefreshSession[]
+  typingAttempts   TypingAttempt[]
+
+  @@index([email])
+  @@map("users")
+}
+
+model OtpVerification {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  otpCode   String   @map("otp_code")
+  attempts  Int      @default(0)
+  requestId String   @map("request_id")
+  expiresAt DateTime @map("expires_at")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([email])
+  @@map("otp_verifications")
+}
+
+model RefreshSession {
+  id          String   @id @default(uuid())
+  userId      String   @map("user_id")
+  hashedToken String   @map("hashed_token")
+  deviceInfo  String?  @map("device_info")
+  ipAddress   String?  @map("ip_address")
+  expiresAt   DateTime @map("expires_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("refresh_sessions")
+}
+
+enum AttemptMode {
+  PRACTICE
+  GAME
+  CONTEST
+}
+
+model TypingAttempt {
+  id              String      @id @default(uuid())
+  userId          String      @map("user_id")
+  mode            AttemptMode
+  wpm             Decimal     @db.Decimal(5, 2)
+  accuracy        Decimal     @db.Decimal(5, 2)
+  wrongWords      Int         @map("wrong_words")
+  correctWords    Int         @map("correct_words")
+  durationSeconds Int         @map("duration_seconds")
+  rawText         String?     @db.Text @map("raw_text")
+  createdAt       DateTime    @default(now()) @map("created_at")
+
+  user            User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt(sort: Desc)])
+  @@map("typing_attempts")
+}
